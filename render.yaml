@@ -1,0 +1,14 @@
+# One-click deploy on Render's free tier (render.com → New → Blueprint).
+services:
+  - type: web
+    name: falcon-time-tracker
+    runtime: node
+    plan: free
+    buildCommand: npm ci --omit=dev --ignore-scripts
+    startCommand: node src/server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: SEED_DEMO
+        value: "true"

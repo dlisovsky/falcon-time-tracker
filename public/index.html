@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>⏱ Time Tracker</h1>
+    <span class="muted">Fictional demo data only</span>
+  </header>
+
+  <main class="layout">
+    <section class="card" aria-labelledby="team-title">
+      <h2 id="team-title">Employees</h2>
+      <form id="add-employee" class="row">
+        <input id="employee-name" name="name" placeholder="New employee name" maxlength="100" required aria-label="Employee name">
+        <button type="submit">Add</button>
+      </form>
+      <p id="employees-empty" class="muted" hidden>No employees yet — add the first one above.</p>
+      <ul id="employees" class="employees"></ul>
+    </section>
+
+    <section class="card" aria-labelledby="report-title">
+      <h2 id="report-title">Report</h2>
+      <form id="report-form" class="filters">
+        <label>From <input type="date" id="from" required></label>
+        <label>To <input type="date" id="to" required></label>
+        <label>Employee
+          <select id="report-employee"><option value="">All employees</option></select>
+        </label>
+        <div class="presets">
+          <button type="button" class="link" data-preset="today">Today</button>
+          <button type="button" class="link" data-preset="week">This week</button>
+          <button type="button" class="link" data-preset="month">This month</button>
+        </div>
+        <button type="submit">Show</button>
+      </form>
+      <div id="report"></div>
+    </section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <template id="employee-template">
+    <li class="employee">
+      <div class="employee-head">
+        <strong class="name"></strong>
+        <span class="status"></span>
+      </div>
+      <form class="timer row">
+        <input class="description" placeholder="What are you working on?" maxlength="500" aria-label="Task description">
+        <button type="submit" class="start">Start</button>
+        <button type="button" class="stop danger">Stop</button>
+      </form>
+    </li>
+  </template>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
