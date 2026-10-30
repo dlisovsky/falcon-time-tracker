@@ -50,7 +50,9 @@ The named volume keeps the database between container restarts.
 
 ### Deploy (free)
 
-`render.yaml` is a Render Blueprint: on render.com choose **New → Blueprint** and select this repo. Render's free tier has an ephemeral disk, so the hosted demo resets to the seeded fictional data when the instance restarts. Locally, and in Docker with a volume, data persists.
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/dlisovsky/falcon-time-tracker)
+
+`render.yaml` is a Render Blueprint: click the button above, or on render.com choose **New → Blueprint** and select this repo. Render's free tier has an ephemeral disk, so the hosted demo resets to the seeded fictional data when the instance restarts. Locally, and in Docker with a volume, data persists.
 
 ## Stack and structure
 
