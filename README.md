@@ -4,7 +4,7 @@ A small web app for tracking employees' working time: add employees, start and s
 
 > All names and tasks in the app and tests are fictional.
 
-**Live demo:** _see the link in the repository description_ (free tier: the first request after a period of inactivity can take ~30–50 s while the instance wakes up)
+**Live demo:** https://falcon-time-tracker.onrender.com (free tier: the first request after a period of inactivity can take ~30–50 s while the instance wakes up)
 
 ## Features
 
